@@ -64,7 +64,7 @@ class Calculator {
                 case 'sub':
                     this.sub();
                     break;
-                case 'div':
+                case 'divide':
                     this.div();
                     break;
                 case 'mult':
@@ -88,7 +88,7 @@ class Calculator {
 
     div() {
         if (this.currentVal !== '0') {
-            this.result /= Number(this.currentVal);
+            this.result = parseFloat(this.result) / parseFloat(this.currentVal);
         } else {
             console.error("Division by zero is not allowed");
         }
